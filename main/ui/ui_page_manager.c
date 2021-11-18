@@ -1911,8 +1911,12 @@ void dc_sync_req(dc_data_msg_t *data_msg){
     dc_topic_subscribe_t *topic_subscribe = find_topic(data_msg->topic);
     if(topic_subscribe){
         if(topic_subscribe->subscribe_list->length > 0){
-            dc_callback c_item = pm_array_list_get(topic_subscribe->subscribe_list, 0);
-            c_item(data_msg);
+            for (int j = 0; j < topic_subscribe->subscribe_list->length; ++j) {
+                dc_callback c = pm_array_list_get(topic_subscribe->subscribe_list, j);
+                if(c){
+                    c(data_msg);
+                }
+            }
         }
     }
 }
