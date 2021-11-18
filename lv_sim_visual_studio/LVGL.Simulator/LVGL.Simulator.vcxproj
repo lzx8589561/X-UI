@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CA6E070-4AC1-475E-BB17-CF29AE4806DF}</ProjectGuid>
+    <RootNamespace>LVGL</RootNamespace>
+    <MileProjectType>ConsoleApplication</MileProjectType>
+    <MileProjectManifestFile>LVGL.Simulator.manifest</MileProjectManifestFile>
+  </PropertyGroup>
+  <Import Project="Mile.Project\Mile.Project.props" />
+  <Import Project="Mile.Project\Mile.Project.Runtime.VC-LTL.props" />
+  <Import Project="freetype.props" />
+  <PropertyGroup>
+    <IncludePath>$(MSBuildThisFileDirectory);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)'=='Release'">MinSpace</Optimization>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\..\..\main\ui;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\main\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="LVGL.Core.vcxitems" />
+  <Import Project="LVGL.Demonstrations.vcxitems" />
+  <Import Project="LVGL.Drivers.vcxitems" />
+  <ItemGroup>
+    <ClInclude Include="..\..\main\ui\app_entity_def.h" />
+    <ClInclude Include="..\..\main\ui\page\dialplate\dialplate.h" />
+    <ClInclude Include="..\..\main\ui\page\dialplate\dialplate_view.h" />
+    <ClInclude Include="..\..\main\ui\page\start_up\start_up.h" />
+    <ClInclude Include="..\..\main\ui\page\start_up\start_up_view.h" />
+    <ClInclude Include="..\..\main\ui\page\status_bar\status_bar.h" />
+    <ClInclude Include="..\..\main\ui\resource\resource_pool.h" />
+    <ClInclude Include="..\..\main\ui\ui_page_manager.h" />
+    <ClInclude Include="lv_conf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lv_drv_conf.h" />
+    <ClInclude Include="lv_demo_conf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="LVGL.Simulator.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mile.Project.Properties.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\main\ui\app_page_factory.c" />
+    <ClCompile Include="..\..\main\ui\page\dialplate\dialplate.c" />
+    <ClCompile Include="..\..\main\ui\page\dialplate\dialplate_view.c" />
+    <ClCompile Include="..\..\main\ui\page\start_up\start_up.c" />
+    <ClCompile Include="..\..\main\ui\page\start_up\start_up_view.c" />
+    <ClCompile Include="..\..\main\ui\page\status_bar\status_bar.c" />
+    <ClCompile Include="..\..\main\ui\resource\font\font_agencyb_36.c" />
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_13.c" />
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_17.c" />
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_32.c" />
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_65.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_alarm.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_battery.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_battery_info.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_bicycle.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_compass.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_arrow_dark.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_arrow_default.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_arrow_light.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_pin.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gyroscope.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_locate.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_map_location.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_menu.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_origin_point.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_pause.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_satellite.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_sd_card.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_start.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_stop.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_storage.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_system_info.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_time_info.c" />
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_trip.c" />
+    <ClCompile Include="..\..\main\ui\resource\resource_pool.c" />
+    <ClCompile Include="..\..\main\ui\ui_page_manager.c" />
+    <ClCompile Include="LVGL.Simulator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LVGL.Simulator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LVGL.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freetype.props" />
+  </ItemGroup>
+  <Import Project="Mile.Project\Mile.Project.targets" />
+</Project>

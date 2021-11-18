@@ -1,0 +1,52 @@
+#include "start_up_view.h"
+#include "../../resource/resource_pool.h"
+#include "../../ui_page_manager.h"
+
+#define COLOR_ORANGE    lv_color_hex(0xff931e)
+
+void startup_view_create(lv_obj_t* root)
+{
+    lv_obj_remove_style_all(root);
+    lv_obj_set_size(root, LV_HOR_RES, LV_VER_RES);
+
+    lv_obj_t* cont = lv_obj_create(root);
+    lv_obj_remove_style_all(cont);
+    lv_obj_clear_flag(cont, LV_OBJ_FLAG_SCROLLABLE);
+    lv_obj_set_size(cont, 110, 50);
+    lv_obj_set_style_border_color(cont, COLOR_ORANGE, 0);
+    lv_obj_set_style_border_side(cont, LV_BORDER_SIDE_BOTTOM, 0);
+    lv_obj_set_style_border_width(cont, 3, 0);
+    lv_obj_set_style_border_post(cont, true, 0);
+    lv_obj_center(cont);
+    startup_view_ui->cont = cont;
+
+    lv_obj_t* label = lv_label_create(cont);
+    lv_obj_set_style_text_font(label, resource_pool_get_font("agencyb_36"), 0);
+    lv_obj_set_style_text_color(label, lv_color_white(), 0);
+    lv_label_set_text(label, "X-TRACK");
+    lv_obj_center(label);
+    startup_view_ui->labelLogo = label;
+
+    startup_view_ui->anim_timeline = lv_anim_timeline_create();
+
+#define ANIM_DEF(start_time, obj, attr, start, end) \
+     {start_time, obj, LV_ANIM_EXEC(attr), start, end, 500, lv_anim_path_ease_out, true}
+
+    lv_anim_timeline_wrapper_t wrapper[] =
+    {
+        ANIM_DEF(0, startup_view_ui->cont, width, 0, lv_obj_get_style_width(startup_view_ui->cont, 0)),
+        ANIM_DEF(500, startup_view_ui->labelLogo, y, lv_obj_get_style_height(startup_view_ui->cont, 0), lv_obj_get_y(startup_view_ui->labelLogo)),
+        LV_ANIM_TIMELINE_WRAPPER_END
+    };
+
+    lv_anim_timeline_add_wrapper(startup_view_ui->anim_timeline, wrapper);
+}
+
+void startup_view_delete()
+{
+    if(startup_view_ui->anim_timeline)
+    {
+        lv_anim_timeline_del(startup_view_ui->anim_timeline);
+        startup_view_ui->anim_timeline = NULL;
+    }
+}

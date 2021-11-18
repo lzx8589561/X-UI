@@ -1,0 +1,13 @@
+/build
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+/cmake-build-debug-mingw/
+/cmake-build-debug/
+git.zip

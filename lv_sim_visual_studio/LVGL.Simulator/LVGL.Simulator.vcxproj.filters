@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="LVGL.Core.vcxitems.filters" />
+  <Import Project="LVGL.Demonstrations.vcxitems.filters" />
+  <Import Project="LVGL.Drivers.vcxitems.filters" />
+  <ItemGroup>
+    <ClInclude Include="lv_conf.h" />
+    <ClInclude Include="lv_drv_conf.h" />
+    <ClInclude Include="..\..\main\ui\app_entity_def.h">
+      <Filter>APP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\ui_page_manager.h">
+      <Filter>APP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\page\dialplate\dialplate.h">
+      <Filter>APP\page\dialplate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\page\dialplate\dialplate_view.h">
+      <Filter>APP\page\dialplate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\page\status_bar\status_bar.h">
+      <Filter>APP\page\status_bar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\page\start_up\start_up.h">
+      <Filter>APP\page\start_up</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\page\start_up\start_up_view.h">
+      <Filter>APP\page\start_up</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\main\ui\resource\resource_pool.h">
+      <Filter>APP\resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lv_demo_conf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="LVGL.Simulator.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Mile.Project.Properties.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LVGL.Simulator.cpp" />
+    <ClCompile Include="..\..\main\ui\app_page_factory.c">
+      <Filter>APP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\ui_page_manager.c">
+      <Filter>APP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\page\dialplate\dialplate.c">
+      <Filter>APP\page\dialplate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\page\dialplate\dialplate_view.c">
+      <Filter>APP\page\dialplate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\page\status_bar\status_bar.c">
+      <Filter>APP\page\status_bar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\page\start_up\start_up.c">
+      <Filter>APP\page\start_up</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\page\start_up\start_up_view.c">
+      <Filter>APP\page\start_up</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\resource_pool.c">
+      <Filter>APP\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\font\font_agencyb_36.c">
+      <Filter>APP\resource\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_13.c">
+      <Filter>APP\resource\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_17.c">
+      <Filter>APP\resource\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_32.c">
+      <Filter>APP\resource\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\font\font_bahnschrift_65.c">
+      <Filter>APP\resource\font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_alarm.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_battery.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_battery_info.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_bicycle.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_compass.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_arrow_dark.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_arrow_default.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_arrow_light.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gps_pin.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_gyroscope.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_locate.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_map_location.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_menu.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_origin_point.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_pause.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_satellite.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_sd_card.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_start.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_stop.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_storage.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_system_info.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_time_info.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\main\ui\resource\img\img_src_trip.c">
+      <Filter>APP\resource\img</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LVGL.Simulator.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="LVGL.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="freetype.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="APP">
+      <UniqueIdentifier>{bedc1b0b-a2ee-44b3-a241-9f141481baa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\page">
+      <UniqueIdentifier>{bc9ac811-8f22-46ce-bcfe-e33fd4924146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\page\dialplate">
+      <UniqueIdentifier>{4ceef909-7678-4504-aff6-ba6f6e5630f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\page\start_up">
+      <UniqueIdentifier>{2e690b2f-ba86-4423-ba20-02a96ecf1e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\page\status_bar">
+      <UniqueIdentifier>{b4e8603f-50dd-44f5-bd31-4b3edc0421a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\resource">
+      <UniqueIdentifier>{b14b0041-674a-4e3d-9927-015f8b87fb2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\resource\font">
+      <UniqueIdentifier>{609c3f1d-91f9-46c6-a2aa-31acec72ec71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\resource\img">
+      <UniqueIdentifier>{8dcf93bb-446f-4831-8c33-b0506f587444}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
