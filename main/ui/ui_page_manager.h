@@ -26,6 +26,7 @@ typedef struct pm_stack_t {
 pm_stack_t *stack_init();
 void *stack_pop(pm_stack_t *stack);
 void *stack_top(pm_stack_t *stack);
+void *stack_get(pm_stack_t *stack, int index);
 int stack_empty(pm_stack_t *stack);
 int stack_push(pm_stack_t *stack, void *data);
 /** --- stack ---*/

@@ -182,16 +182,12 @@ page_base_handler find_page_in_pool(const char *name) {
   * @retval A pointer to the base class of the page, or NULL if not found
   */
 page_base_handler find_page_in_stack(const char *name) {
-    while (!stack_empty(page_stack)) {
-        page_base_handler base = stack_top(page_stack);
-
+    for (int i = 0; i < page_stack->length; ++i) {
+        page_base_handler base = stack_get(page_stack, i);
         if (strcmp(name, base->name) == 0) {
             return base;
         }
-
-        stack_pop(page_stack);
     }
-
     return NULL;
 }
 
@@ -1700,6 +1696,12 @@ void *stack_pop(pm_stack_t *stack) {
     return data;
 }
 
+void *stack_get(pm_stack_t *stack, int index) {
+    if (stack == NULL || stack->length == 0 || index > (stack->length - 1))
+        return NULL;
+    return stack->node[index].data;
+}
+
 void *stack_top(pm_stack_t *stack) {
     if (stack == NULL || stack->length == 0)
         return NULL;
@@ -1708,7 +1710,7 @@ void *stack_top(pm_stack_t *stack) {
 
 int stack_empty(pm_stack_t *stack) {
     if (stack == NULL)
-        return 0;
+        return 1;
     return stack->length == 0;
 }
 
