@@ -289,8 +289,6 @@
     <ClCompile Include="lvgl\examples\widgets\meter\lv_example_meter_3.c" />
     <ClCompile Include="lvgl\examples\widgets\meter\lv_example_meter_4.c" />
     <ClCompile Include="lvgl\examples\widgets\msgbox\lv_example_msgbox_1.c" />
-    <ClCompile Include="lvgl\examples\widgets\obj\lv_example_obj_1.c" />
-    <ClCompile Include="lvgl\examples\widgets\obj\lv_example_obj_2.c" />
     <ClCompile Include="lvgl\examples\widgets\roller\lv_example_roller_1.c" />
     <ClCompile Include="lvgl\examples\widgets\roller\lv_example_roller_2.c" />
     <ClCompile Include="lvgl\examples\widgets\roller\lv_example_roller_3.c" />
